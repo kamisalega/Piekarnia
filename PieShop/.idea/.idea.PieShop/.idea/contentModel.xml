@@ -7,6 +7,14 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Category.cs" t="Include" />
+          <e p="ICategoryRepository.cs" t="Include" />
+          <e p="IPieRepository.cs" t="Include" />
+          <e p="MockCategoryRepository.cs" t="Include" />
+          <e p="MockPieRepository.cs" t="Include" />
+          <e p="Pie.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
