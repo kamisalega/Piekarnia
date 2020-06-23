@@ -28,3 +28,6 @@
 /Users/kamilsalega/Documents/Programowanie/Piekarnia/PieShop/PieShop/obj/Debug/netcoreapp3.1/PieShop.pdb
 /Users/kamilsalega/Documents/Programowanie/Piekarnia/PieShop/PieShop/obj/Debug/netcoreapp3.1/PieShop.genruntimeconfig.cache
 /Users/kamilsalega/Documents/Programowanie/Piekarnia/PieShop/PieShop/obj/Debug/netcoreapp3.1/PieShop.csproj.CopyComplete
+/Users/kamilsalega/Documents/Programowanie/Piekarnia/PieShop/PieShop/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/kamilsalega/Documents/Programowanie/Piekarnia/PieShop/PieShop/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/kamilsalega/Documents/Programowanie/Piekarnia/PieShop/PieShop/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
