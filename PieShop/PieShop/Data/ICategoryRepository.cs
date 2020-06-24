@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace PieShop.Models
+namespace PieShop.Data
 {
     public interface ICategoryRepository
     {

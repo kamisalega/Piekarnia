@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using PieShop.Models;
 
-namespace PieShop.Models
+namespace PieShop.Data
 {
     public class MockCategoryRepository : ICategoryRepository
     {

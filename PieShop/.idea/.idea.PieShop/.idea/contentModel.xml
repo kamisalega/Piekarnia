@@ -12,13 +12,17 @@
         </e>
         <e p="data" t="Include">
           <e p="AppDbContext.cs" t="Include" />
-        </e>
-        <e p="Models" t="Include">
-          <e p="Category.cs" t="Include" />
           <e p="ICategoryRepository.cs" t="Include" />
+          <e p="Impl" t="Include">
+            <e p="CategoryRepository.cs" t="Include" />
+            <e p="PieRepository.cs" t="Include" />
+          </e>
           <e p="IPieRepository.cs" t="Include" />
           <e p="MockCategoryRepository.cs" t="Include" />
           <e p="MockPieRepository.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Category.cs" t="Include" />
           <e p="Pie.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

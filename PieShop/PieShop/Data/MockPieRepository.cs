@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using PieShop.Models;
 
-namespace PieShop.Models
+namespace PieShop.Data
 {
     public class MockPieRepository : IPieRepository
     {
@@ -61,4 +62,3 @@ namespace PieShop.Models
         }
     }
 }
-
