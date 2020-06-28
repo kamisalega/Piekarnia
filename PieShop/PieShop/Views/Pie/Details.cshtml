@@ -8,7 +8,13 @@
         <h3>
             <a href="#">@Model.Name</a>
         </h3>
-        <h4>@Model.ShortDescription</h4>
-        <h4>@Model.LongDescription</h4>
+        <p>@Model.ShortDescription</p>
+        <p>@Model.LongDescription</p>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+                   asp-route-pieId="@Model.PieId">Dodaj do koszyka</a>
+            </p>
+        </div>
     </div>
 </div>
