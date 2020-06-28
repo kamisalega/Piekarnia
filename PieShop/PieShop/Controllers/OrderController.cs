@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PieShop.Data;
 using PieShop.Data.Impl;
+using PieShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,32 @@ namespace PieShop.Controllers
         // GET: /<controller>/
         public IActionResult Checkout()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Checkout(Order order)
+        {
+            var items = _shoppingCart.GetShoppingCartItems();
+            _shoppingCart.ShoppingCartItems = items;
+
+            if (_shoppingCart.ShoppingCartItems.Count == 0)
+            {
+                ModelState.AddModelError("", "Twój koszyk jest pusty, najpierw dodaj kilka ciast");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _orderRepository.CreateOrder(order);
+                _shoppingCart.ClearCart();
+                return RedirectToAction("CheckoutComplete");
+            }
+            return View(order);
+        }
+
+        public IActionResult CheckoutComplete()
+        {
+            ViewBag.CheckoutCompleteMessage = "Dziękujemy za zamówienie. Wkrótce spodoba ci się nasze pyszne ciasta!";
             return View();
         }
     }
