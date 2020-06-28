@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PieShop.Data;
 
 namespace PieShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200628221114_AddedOrder")]
+    partial class AddedOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +52,7 @@ namespace PieShop.Migrations
                         new
                         {
                             CategoryId = 3,
-                            CategoryName = "Sezonowe ciasta"
+                            CategoryName = "sezonowe ciasta"
                         });
                 });
 
@@ -99,7 +101,7 @@ namespace PieShop.Migrations
 
                     b.HasKey("OrderId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("PieShop.Models.OrderDetail", b =>
@@ -299,7 +301,7 @@ namespace PieShop.Migrations
                             InStock = true,
                             IsPieOfTheWeek = true,
                             LongDescription = "Lukierowy żelkowy tort żelowy sernik. Słodka bułka marcepan marshmallow toffi brownie brownie tootsie roll. Ciasto Czekoladowe Piernik Tootsie Roll Owies Ciasto Ciasto Czekoladowe Ciastko Dragée Brownie. Lollipop Wata cukrowa ciasto niedźwiedź pazur owsiane ciasto. Tarta deserowa z trzciny cukrowej Dragée. Marcepanowe dragée żelki lizakowe jujuby batoniki czekoladowe. Lukier chupa chupa chups wata cukrowa ciasteczko słodki lukier bonbonowe żelki. Gummies Lollipop Brownie Biscuit Duńskie Ciasto Czekoladowe. Ciastko w proszku duński makaronik czekoladowy pączek. Ciasto marchewkowe Dragée Rogalik Krople cytryny Lukrecja Krople cytryny Ciastko Lollipop Toffi. Ciasto marchewkowe Ciasto marchewkowe Lukrecja Cukier Śliwka Polewa Bonbon Pie Muffin Jujubes. Tarta waflowa karmelowa tarta karmelowa niedźwiedź pazur. Ciasto tarta tiramisu duńskie krople cytryny. Babeczki Brownie Dragée.",
-                            Name = "Ciasto rabarbarowe",
+                            Name = "ciasto rabarbarowe",
                             Price = 15.95m,
                             ShortDescription = "Mój Boże, taki słodki!"
                         },

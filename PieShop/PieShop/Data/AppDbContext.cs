@@ -12,6 +12,8 @@ namespace PieShop.Data
         public DbSet<Pie> Pies { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -19,7 +21,7 @@ namespace PieShop.Data
 
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 1, CategoryName = "Ciasto owocowe" });
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 2, CategoryName = "Sernik" });
-            modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 3, CategoryName = "sezonowe ciasta" });
+            modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 3, CategoryName = "Sezonowe ciasta" });
 
             modelBuilder.Entity<Pie>().HasData(new Pie
             {
@@ -155,7 +157,7 @@ namespace PieShop.Data
             modelBuilder.Entity<Pie>().HasData(new Pie
             {
                 PieId = 9,
-                Name = "ciasto rabarbarowe",
+                Name = "Ciasto rabarbarowe",
                 Price = 15.95M,
                 ShortDescription = "Mój Bo¿e, taki s³odki!",
                 LongDescription =
