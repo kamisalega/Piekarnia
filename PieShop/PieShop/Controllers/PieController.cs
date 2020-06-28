@@ -19,9 +19,21 @@ namespace PieShop.Controllers
         {
             var piesListViewModel = new PiesListViewModel();
             piesListViewModel.Pies = _pieRepository.AllPies;
-            
+
             piesListViewModel.CurrentCategory = "Sernik";
             return View(piesListViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+
+            if (pie == null)
+            {
+                return NotFound();
+            }
+
+            return View(pie);
         }
     }
 }
