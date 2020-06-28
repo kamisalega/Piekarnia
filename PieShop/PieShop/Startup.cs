@@ -57,6 +57,7 @@ namespace PieShop
             app.UseSession();
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
