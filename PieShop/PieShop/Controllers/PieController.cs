@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using PieShop.Models;
+using PieShop.Data;
 using PieShop.ViewModels;
 
 namespace PieShop.Controllers
