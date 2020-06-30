@@ -56,9 +56,34 @@ namespace PieShop.Data
 
         public IEnumerable<Pie> PiesOfTheWeek { get; }
 
+        public Pie Add(Pie addPie)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Commit()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Pie Delete(int pieId)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Pie GetPieById(int pieId)
         {
             return AllPies.FirstOrDefault(p => p.PieId == pieId);
+        }
+
+        public IEnumerable<Pie> GetPieByName(string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Pie Update(Pie updatePie)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
