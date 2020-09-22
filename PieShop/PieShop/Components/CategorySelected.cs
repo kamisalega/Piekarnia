@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PieShop.Data;
+using PieShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

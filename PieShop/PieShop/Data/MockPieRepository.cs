@@ -54,6 +54,10 @@ namespace PieShop.Data
                 }
             };
 
+        public string FirstCategoryName { get; set; }
+        public string LastCategoryName { get; set; }
+
+        public string FullCategoryName => $"{FirstCategoryName} {LastCategoryName}";
         public IEnumerable<Pie> PiesOfTheWeek { get; }
 
         public Pie Add(Pie addPie)
