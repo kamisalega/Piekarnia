@@ -19,6 +19,44 @@ namespace PieShop.Data.Impl
         public IEnumerable<Pie> PiesOfTheWeek =>
             _appDbContext.Pies.Include(pie => pie.Category).Where(pie => pie.IsPieOfTheWeek);
 
-        public Pie GetPieById(int pieId) => _appDbContext.Pies.FirstOrDefault(pie => pie.PieId == pieId);
+        public Pie Add(Pie newPie)
+        {
+            newPie.PieId = _appDbContext.Pies.Max(p => p.PieId) + 1;
+            _appDbContext.Pies.Add(newPie);
+
+            return newPie;
+        }
+
+        public int Commit()
+        {
+            return _appDbContext.SaveChanges();
+        }
+
+        public Pie Delete(int pieId)
+        {
+            var pie = GetPieById(pieId);
+            if (pie != null)
+            {
+                _appDbContext.Pies.Remove(pie);
+            }
+
+            return pie;
+        }
+
+        public Pie GetPieById(int pieId) => _appDbContext.Pies.Find(pieId);
+
+        public IEnumerable<Pie> GetPieByName(string name = null)
+        {
+            return _appDbContext.Pies.Where(p => string.IsNullOrEmpty(name) || p.Name.StartsWith(name))
+                .OrderBy(p => p.Name).Select(p => p).ToList();
+        }
+
+        public Pie Update(Pie updatePie)
+        {
+            var entity = _appDbContext.Pies.Attach(updatePie);
+            entity.State = EntityState.Modified;
+
+            return updatePie;
+        }
     }
 }

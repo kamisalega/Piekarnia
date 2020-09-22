@@ -26,5 +26,10 @@ namespace PieShop.Data
                 Description = "Zrób nastrój na sezonowe ciasta"
             }
         };
+
+        public Category GetCategoryById(int categoryId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,0 +1,26 @@
+﻿@model PieEditViewModel
+
+<h2>Strona edycji @Model.Pie.Name</h2>
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="@Model.Pie.PieId"/>
+    <div class="form-group">
+        <lebel asp-for="@Model.Pie.Name"></lebel>
+        <input asp-for="@Model.Pie.Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <lebel asp-for="@Model.Pie.Price"></lebel>
+        <input asp-for="@Model.Pie.Price" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <lebel asp-for="@Model.Category.CategoryName"></lebel>
+        <select class="form-control" asp-for="@Model.Category.CategoryName" asp-items="@Model.Categories"></select>
+    </div>  
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-5">
+        <input type="submit" class="btn btn-primary" value="Zapisz" />
+    </div>
+</div>
+</form>

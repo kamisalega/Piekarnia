@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=02e27864_002D50c8_002D42e6_002Db993_002D2a3014028843/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BeInexperiencedWhenNew" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::23D08442-4A87-4433-9D79-34B9ECDD96B7::.NETCoreApp,Version=v3.1::PieShop.Test.PieRepositoryShould&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fd8bc1c3_002Dab51_002D41e8_002D9b8d_002Db4933fd5909b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PieRepositoryShould" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::23D08442-4A87-4433-9D79-34B9ECDD96B7::.NETCoreApp,Version=v3.1::PieShop.Test.PieRepositoryShould&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

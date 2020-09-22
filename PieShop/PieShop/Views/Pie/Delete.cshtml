@@ -1,0 +1,10 @@
+﻿@model Pie
+
+<h2>Delete!</h2>
+<div class="alert alert-danger">
+    Czy jesteś pewien że chcesz usnąć @Model.Name?
+</div>
+<form asp-action="DeleteItem" asp-route-pieId="@Model.PieId" method="post">
+    <button type="submit" class="btn btn-danger">Tak</button>
+    <a asp-action="ListAllPies" class="btn btn-default">Zamknij</a>
+</form>

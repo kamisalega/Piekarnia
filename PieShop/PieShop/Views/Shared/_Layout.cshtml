@@ -24,10 +24,11 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a asp-controller="Home" asp-action="Index">Strona domowa</a>
+                            <a asp-controller="Home" asp-action="Index">Strona domowa</a>  
                         </li>
                         @await Component.InvokeAsync("CategoryMenu")
                         <li><a asp-controller="Contact" asp-action="Index">Kontakt</a></li>
+                        <li><a asp-controller="Pie" asp-action="ListAllPies">Dodaj produkty</a></li>
                         @await Component.InvokeAsync("ShoppingCartSummary")
                         <partial name="_LoginPartial" />
 
@@ -39,7 +40,7 @@
         <div class="row">
             <div class="col-md-3">
                 <p class="lead">
-                    <img class="img-responsive" alt="Piekarnia Kamila" src="~/images/bethanylogo.png" />
+                    <img class="img-responsive" alt="Piekarnia Kamila" src="~/images/wypiekarnia.png" />
                 </p>
             </div>
             <div class="col-md-9">

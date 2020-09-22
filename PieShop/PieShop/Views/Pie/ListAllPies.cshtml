@@ -1,0 +1,42 @@
+﻿@model PiesListViewModel
+
+
+
+<h1>Lista ciast</h1>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" value="" name="searchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var pie in Model.Pies)
+    {
+        <tr>
+            <td>@pie.Name</td>
+            <td>@pie.InStock</td>
+            <td>@pie.ShortDescription</td>
+            <td>@pie.Price</td>
+            <td>
+                <a class="btn btn-lg" asp-controller="Pie" asp-action="Details" asp-route-pieId="@pie.PieId">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+                <a class="btn btn-lg" asp-controller="Pie" asp-action="Edit" asp-route-pieId="@pie.PieId">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a class="btn btn-lg" asp-controller="Pie" asp-action="Delete" asp-route-pieId="@pie.PieId">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" asp-controller="Pie" asp-action="Edit">Dodaj nowy produkt</a>

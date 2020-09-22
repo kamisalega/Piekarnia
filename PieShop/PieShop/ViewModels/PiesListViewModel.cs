@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using PieShop.Models;
 
 namespace PieShop.ViewModels
@@ -8,5 +9,8 @@ namespace PieShop.ViewModels
     {
         public IEnumerable<Pie> Pies { get; set; }
         public string CurrentCategory { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
     }
 }
