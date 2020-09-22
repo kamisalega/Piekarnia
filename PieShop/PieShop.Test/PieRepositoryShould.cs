@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PieShop.Test
 {
-    public class UnitTest1
+    public class PieRepositoryShould
     {
         [Fact]
         public void BeInexperiencedWhenNew()
