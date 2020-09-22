@@ -13,5 +13,10 @@ namespace PieShop.Data.Impl
         }
 
         public IEnumerable<Category> AllCategories => _appDbContext.Categories;
+
+        public Category GetCategoryById(int categoryId)
+        {
+            return _appDbContext.Categories.Find(categoryId);
+        }
     }
 }

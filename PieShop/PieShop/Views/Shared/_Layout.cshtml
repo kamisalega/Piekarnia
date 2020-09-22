@@ -24,10 +24,11 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a asp-controller="Home" asp-action="Index">Strona domowa</a>
+                            <a asp-controller="Home" asp-action="Index">Strona domowa</a>  
                         </li>
                         @await Component.InvokeAsync("CategoryMenu")
                         <li><a asp-controller="Contact" asp-action="Index">Kontakt</a></li>
+                        <li><a asp-controller="Pie" asp-action="ListAllPies">Dodaj produkty</a></li>
                         @await Component.InvokeAsync("ShoppingCartSummary")
                         <partial name="_LoginPartial" />
 

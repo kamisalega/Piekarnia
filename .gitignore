@@ -6,3 +6,7 @@ PieShop/.vs/PieShop/config/
 PieShop/.vs/PieShop/DesignTimeBuild/
 
 PieShop/.vs/PieShop/v16/
+
+PieShop/PieShop/obj/
+
+PieShop/PieShop.Test/obj/
